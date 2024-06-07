@@ -1,0 +1,56 @@
+{
+  "name": "bbundler",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/bundle.js",
+  "types": "src/index.ts",
+  "files": [
+    "dist",
+    "src/index.ts"
+  ],
+  "scripts": {
+    "start": "node bin/dev.js",
+    "build": "node bin/dev.js bundle src/index.ts dist/bundle.js --platform=browser --format=esm",
+    "watch": "node bin/dev.js watch src/index.ts dist/bundle.js --platform=browser --format=esm",
+    "build:web": "node bin/dev.js bundle src/index.ts browser/bundle.js --platform=browser",
+    "build:web_esm": "node bin/dev.js watch src/index.ts browser/bundle_esm.js --platform=browser --format=esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/debounce": "^1.2.0",
+    "@types/node": "^14.14.22",
+    "@types/node-fetch": "^2.5.8",
+    "@types/resolve": "^1.19.0",
+    "@types/yargs": "^15.0.12",
+    "buffer": "^6.0.3",
+    "builtin-modules": "^3.2.0",
+    "builtins": "^3.0.1",
+    "chokidar": "^3.5.0",
+    "crypto-browserify": "^3.12.0",
+    "debounce": "^1.2.0",
+    "enhanced-resolve": "^5.7.0",
+    "klona": "^2.0.4",
+    "memfs": "^3.2.0",
+    "monaco-editor": "^0.22.3",
+    "node-fetch": "^2.6.1",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "resolve": "^1.19.0",
+    "rollup": "^2.36.1",
+    "rollup-plugin-image": "^1.0.2",
+    "stream-browserify": "^3.0.0",
+    "tapable": "^2.2.0",
+    "tty-browserify": "^0.0.1",
+    "vm-browserify": "^1.1.2",
+    "webpack": "^5.14.0",
+    "yargs": "^17.7.2"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "esbuild-plugin-umd-wrapper": "^2.0.0",
+    "p-defer": "^3.0.0",
+    "url": "^0.11.0"
+  }
+}
